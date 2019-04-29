@@ -1,0 +1,12 @@
+# Import numpy
+import numpy as np
+
+# Inspect missing values in the dataset
+cc_apps_tail=cc_apps.tail()
+print(cc_apps_tail)
+
+# Replace the '?'s with NaN
+cc_apps = cc_apps.replace('?',np.NaN)
+
+# Inspect the missing values again
+cc_apps.tail()
